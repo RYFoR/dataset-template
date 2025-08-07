@@ -2,6 +2,8 @@
 
 This report provides an overview of the data quality assessment for the dataset **[Dataset Name]**. The goal is to identify and document any data anomalies, missing values, outliers, and data consistency issues.
 
+> ⚠️ **This is a template file**. Please customize each section with your own dataset-specific details. Placeholder fields are marked clearly.
+
 ## Summary
 
 - **Dataset Name**: [Dataset Name]

@@ -1,0 +1,5 @@
+name: family-survey-env
+dependencies:
+  - python=3.10
+  - pandas
+  - jupyterlab

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this dataset template, please cite it as below."
+title: "RYFoR Dataset Template for FAIR and Reusable Scientific Data"
+version: "1.0.0"
+doi: "10.5281/zenodo.1234567"
+date-released: 2025-08-07
+
+authors:
+  - family-names: "Farnwick"
+    given-names: "Alberic"
+    orcid: "https://orcid.org/0000-0000-1111-2222"
+    affiliation: "Institute of Hypothetical Research, Dept. of Data Stewardship"
+    email: "alberic.farnwick@ihr.edu"
+
+  - family-names: "Kozlova"
+    given-names: "Nadezhka-Elis"
+    orcid: "https://orcid.org/0000-0000-3333-4444"
+    affiliation: "Open Research Academy of the North, FAIR Data Division"
+    email: "nadezhka.kozlova@oran.org"
+
+  - family-names: "Oluremi"
+    given-names: "Tundé-Maxon"
+    orcid: "https://orcid.org/0000-0000-5555-6666"
+    affiliation: "Federation for Synthetic Science, Semantic Infrastructure Unit"
+    email: "tunde.oluremi@fedsynsci.org"
+
+keywords:
+  - FAIR data
+  - dataset template
+  - research reproducibility
+  - open science
+  - metadata standards
+
+repository-code: "https://github.com/ryfor/data-template"
+license: "MIT"

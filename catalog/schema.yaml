@@ -1,0 +1,5 @@
+fields:
+  - name: family_income
+    type: number
+  - name: number_of_children
+    type: integer
