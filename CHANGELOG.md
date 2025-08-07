@@ -1,28 +1,48 @@
-# Changelog
+# 📦 Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this dataset template are documented in this file.  
+This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+---
 
-## [1.0.0] - 2023-09-11
+## [3.3.0] - 2025-08-07
+
 ### Added
-- Initial release of the dataset.
+- Templates for metadata, FAIR files, and data dictionary extensions.
+- Schema.org and DCAT metadata for catalog indexing.
+- Machine-readable metadata: `datapackage.json`, `dcat.ttl`, `schemaorg.jsonld`.
+- Pre-filled `.zenodo.json` and `CITATION.cff` for DOI and citation support.
+- Enhanced `USAGE.md` and `README.md` for onboarding and documentation clarity.
+- Synthetic example dataset (`metadata.csv`) with 50 entries.
 
-### Changed
-- Updated data dictionary to include additional column descriptions.
-- Improved data quality by addressing missing values.
-- Enhanced code samples for data analysis.
+---
 
-### Fixed
-- Corrected formatting issues in documentation.
+## [3.2.0] - 2025-08-07
 
-## [0.1.0] - 2023-08-15
 ### Added
-- Sample data files for testing purposes.
-- Detailed dataset documentation in the `docs/` folder.
-- License information in `LICENSE`.
+- Directory structure following FAIR and open science best practices.
+- Human-readable documentation: `data_dictionary.md`, `quality_report.md`, `ethical_considerations.md`.
+- Jupyter notebooks for data exploration and processing.
+- Contributor and governance files: `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`.
+
+### Improved
+- Modular and clean layout for clarity and extensibility.
+- Pre-configured folders for `raw/`, `processed/`, and `external/` data segregation.
+- Support for validation via Frictionless Data standards.
+
+---
+
+## [1.0.0] - 2023-08-15
+
+### Added
+- 🎉 Initial public release of the RYFoR Dataset Template.
+- Early draft of the template structure with sample data.
+- Placeholder files for documentation and variable descriptions.
+
+---
 
 ## [0.0.1] - 2023-07-20
-### Added
-- Created the repository and added the README.
 
+### Added
+- Project initialization.
+- Basic README and initial folder scaffold.

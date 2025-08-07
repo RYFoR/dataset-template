@@ -1,7 +1,0 @@
-{
-  "title": "Family Survey Dataset",
-  "license": "MIT",
-  "resources": [
-    {"path": "data/raw/metadata.csv"}
-  ]
-}

@@ -19,8 +19,8 @@ This guide walks you through the steps required to use, adapt, and share your ow
 ### Prerequisites
 
 - Python 3.8+
-- Jupyter Notebook
-- Pandas, Matplotlib, Seaborn
+- Pandas (for CSV handling)
+- Git, Markdown, and basic knowledge of metadata standards
 
 ### Installation
 
@@ -76,18 +76,24 @@ jupyter notebook
 
 ## 🧬 4. Declare Metadata
 
-Update the metadata under the `catalog/` folder:
+Your dataset includes several machine-readable metadata files:
 
-- `catalog.json`: Human and machine-readable metadata.
-- `schema.yaml`: Structural and semantic definition of your dataset.
+- `datapackage.json`: For validation with Frictionless Data tools
+- `.zenodo.json`: For automatic metadata ingestion when publishing on Zenodo
+- `schemaorg.jsonld`: Embedded JSON-LD for discoverability in Google Dataset Search
+- `dcat.ttl`: DCAT-compliant RDF metadata for data catalogs
+- `CITATION.cff`: Citation metadata (DOI, version, authors)
+
+These help ensure your dataset is **FAIR**: Findable, Accessible, Interoperable, and Reusable.
 
 ---
 
 ## ♻️ 5. Reuse and Share
 
-- Update `CITATION.cff` to declare how your dataset should be cited.
-- Include a license in the `LICENSE` file (CC BY recommended).
-- Optional: fill the `FAIR/` folder with machine-readable FAIR profiles or linked vocabularies.
+- Publish on [Zenodo](https://zenodo.org/) or [MendeleyData](https://data.mendeley.com/)
+- Register a DOI (automatically with `.zenodo.json`)
+- Share with institutions or platforms that support DCAT or Frictionless metadata
+- Reference your dataset using the `CITATION.cff` format
 
 ---
 
@@ -104,34 +110,45 @@ Encourage contributions with:
 ## 🗂️ Project Structure
 
 ```
-RYFOR-data-template/
-├── .github/                      # GitHub issue templates
-├── catalog/                      # Metadata catalog and schema definitions
-│   ├── catalog.json
-│   └── schema.yaml
-├── data/
-│   └── raw/                      # Source data files
-│       └── metadata.csv
+dataset-template/
+│
+├── .github/                      # Community health files (issues, templates, policies)
+│   └── ISSUE_TEMPLATE.md         # Template for reporting issues or suggestions
+│
+├── data/                         # All dataset files are stored here
+│   ├── external/                 # External data sources (raw, unaltered)
+│   ├── processed/                # Cleaned and transformed data ready for analysis
+│   └── raw/                      # Primary raw data (e.g., metadata.csv, data.csv)
+│
 ├── docs/                         # Human-readable documentation
-│   ├── codebook.md
-│   ├── data_dictionary.md
-│   ├── methodology.md
-│   └── quality_report.md
-├── notebooks/                    # Jupyter notebooks for data analysis
-│   └── 01-explore_raw_data.ipynb
-├── src/                          # Python source code modules
-│   └── family_survey_data/
-│       ├── __init__.py
-│       ├── data_loader.py
-│       ├── preprocessing.py
-│       └── utils.py
-├── FAIR/                         # FAIR principles declaration (TO BE COMPLETED)
-├── CHANGELOG.md
-├── CITATION.cff
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-├── environment.yml
-└── pyproject.toml
+│   ├── data_dictionary.md        # Description of each dataset variable
+│   ├── ethical_considerations.md # Ethical checklist and research compliance notes
+│   ├── methodology.md            # Data collection and processing methodology
+│   ├── quality_report.md         # Data quality insights and validation output
+│   └── README.md                 # Description of the documentation module
+│
+├── fair/                         # FAIR compliance statements and evidence
+│   └── README.md                 # Summary of FAIR alignment strategies
+│
+├── metadata/                     # Machine-readable metadata for catalogs
+│   ├── dcat.ttl                  # DCAT RDF file for semantic catalogs
+│   └── schemaorg.jsonld          # Schema.org metadata for Google Dataset Search
+│
+├── notebooks/                    # Interactive notebooks for data analysis
+│   ├── 00-quality_report.ipynb   # Quality control and summary statistics
+│   ├── 01-explore_raw_data.ipynb # Initial data exploration
+│   ├── 02-preprocessing.ipynb    # Cleaning and preprocessing steps
+│   └── 03-analysis.ipynb         # Main analysis workflows
+│
+├── .gitignore                    # Git exclusions
+├── .zenodo.json                  # Zenodo-compatible metadata file
+├── CHANGELOG.md                  # Version history and changes
+├── CITATION.cff                  # Citation metadata (DOI, author, version)
+├── CODE_OF_CONDUCT.md            # Contributor behavior expectations
+├── CONTRIBUTING.md               # Guidelines for contributions
+├── datapackage.json              # Frictionless Data metadata descriptor
+├── LICENSE                       # Licensing terms (e.g., MIT)
+├── README.md                     # Main description of the dataset and usage
+├── trinity.win.commit.cmd        # Helper script (customizable for internal use)
+└── USAGE.md                      # How to use and adapt this dataset template
 ```
